@@ -71,8 +71,13 @@ function SetResult() {
             break;
         }
     operation = null;
+<<<<<<< HEAD
     number1Arr = Array();
     number2Arr = Array();
+=======
+    number1Array = Array();
+    number2Array = Array();
+>>>>>>> master
     document.getElementById("result").innerHTML = result==null ? 0: result;
 }
 
