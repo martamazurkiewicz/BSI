@@ -15,11 +15,6 @@ function GetNumber(input){
     }
     else
     {
-        if(result != null)
-            number1 = result;
-        else
-            number1 = ConvertToNumber(number1Array);
-
         if( !(number2Array.length == 0 && input == 0) && number2Array.length < 9)
         number2Array += input.toString();
 
@@ -46,10 +41,17 @@ function Start(){
 
 function SetOperationCode(code){ 
     operation = code;
+    if(result != null)
+        number1 = result;
+    else
+        number1 = ConvertToNumber(number1Array);
 }
 
 function SetResult() {
-    number2 = ConvertToNumber(number2Array);
+    if(number2Array.length != 0)
+        number2 = ConvertToNumber(number2Array);
+    else
+        number2 = 0;
     switch(operation)
     {
         case 1:
