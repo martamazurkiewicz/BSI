@@ -71,6 +71,7 @@ function SetResult() {
             break;
         }
     operation = null;
+    number1Array = Array();
     number2Array = Array();
     document.getElementById("result").innerHTML = result==null ? 0: result;
 }
