@@ -2,18 +2,38 @@ var number1;
 var number2;
 var result
 var operation
+var number1Array = Array();
+var number2Array = Array();
 function GetNumber(input)
-{   
-    if(result!=null)
-    number1 = result;
-    if(number1==null)
-    number1 = input;
+{
+    if(operation == null)
+    {
+        if( !(number1Array.length == 0 && input == 0) && number1Array.length < 9)
+            number1Array += input.toString();
+        if(number1Array.length != 0)
+            document.getElementById("result").innerHTML = number1Array;
+        else
+            document.getElementById("result").innerHTML = 0;
+    }
     else
-    number2 = input;
-    document.getElementById("result").innerHTML = input;
+    {
+        if(result != null)
+            number1 = result;
+        else
+            number1 = ConvToNumber(number1Array);
+
+        if( !(number2Array.length == 0 && input == 0) && number2Array.length < 9)
+            number2Array += input.toString();
+        if(number2Array.length != 0)
+            document.getElementById("result").innerHTML = number2Array;
+        else
+            document.getElementById("result").innerHTML = 0;
+    }
 }
 function Start()
 {
+    number1Array = null;
+    number2Array = null;
     number1 = null;
     number2 = null;
     operation = null;
@@ -38,6 +58,8 @@ function Div()
 }
 function SetResult() 
 {
+    number2 = ConvertToNumber(number2Array);
+
     switch(operation)
     {
         case 1:
@@ -56,5 +78,19 @@ function SetResult()
             result = null;
             break;
         }
+    operation = null;
     document.getElementById("result").innerHTML = result==null ? 0: result;
+}
+function ConvToNumber(stringArr)
+{
+    var num;
+    var multiplier = 1;
+    alert(stringArr);
+    for(i = stringArr.length-1; i >= 0; i--)
+    {
+        num += multiplier * parseInt(stringArr[i],10);
+        multiplier *= 10;
+    }
+    alert(num);
+    return num;
 }
