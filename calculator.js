@@ -1,24 +1,24 @@
 var number1;
 var number2;
-var result
-var operation
-var number1Array = Array();
-var number2Array = Array();
+var result;
+var operation;
+var number1Arr = Array();
+var number2Arr = Array();
 
 function GetNumber(input){
     if(operation == null)
     {
-        if( !(number1Array.length == 0 && input == 0) && number1Array.length < 9)
-        number1Array += input.toString();
+        if( !(number1Arr.length == 0 && input == 0) && number1Arr.length < 9)
+        number1Arr += input.toString();
 
-        Display(number1Array);
+        Display(number1Arr);
     }
     else
     {
-        if( !(number2Array.length == 0 && input == 0) && number2Array.length < 9)
-        number2Array += input.toString();
+        if( !(number2Arr.length == 0 && input == 0) && number2Arr.length < 9)
+        number2Arr += input.toString();
 
-        Display(number2Array);
+        Display(number2Arr);
     }
 }
 
@@ -30,8 +30,8 @@ function Display(arr){
 }
 
 function Start(){
-    number1Array = Array();
-    number2Array = Array();
+    number1Arr = Array();
+    number2Arr = Array();
     number1 = null;
     number2 = null;
     operation = null;
@@ -44,12 +44,12 @@ function SetOperationCode(code){
     if(result != null)
         number1 = result;
     else
-        number1 = ConvertToNumber(number1Array);
+        number1 = ConvertToNumber(number1Arr);
 }
 
 function SetResult() {
-    if(number2Array.length != 0)
-        number2 = ConvertToNumber(number2Array);
+    if(number2Arr.length != 0)
+        number2 = ConvertToNumber(number2Arr);
     else
         number2 = 0;
     switch(operation)
@@ -71,8 +71,8 @@ function SetResult() {
             break;
         }
     operation = null;
-    number1Array = Array();
-    number2Array = Array();
+    number1Arr = Array();
+    number2Arr = Array();
     document.getElementById("result").innerHTML = result==null ? 0: result;
 }
 
