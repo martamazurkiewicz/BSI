@@ -4,62 +4,52 @@ var result
 var operation
 var number1Array = Array();
 var number2Array = Array();
-function GetNumber(input)
-{
+
+function GetNumber(input){
     if(operation == null)
     {
         if( !(number1Array.length == 0 && input == 0) && number1Array.length < 9)
-            number1Array += input.toString();
-        if(number1Array.length != 0)
-            document.getElementById("result").innerHTML = number1Array;
-        else
-            document.getElementById("result").innerHTML = 0;
+        number1Array += input.toString();
+
+        Display(number1Array);
     }
     else
     {
         if(result != null)
             number1 = result;
         else
-            number1 = ConvToNumber(number1Array);
+            number1 = ConvertToNumber(number1Array);
 
         if( !(number2Array.length == 0 && input == 0) && number2Array.length < 9)
-            number2Array += input.toString();
-        if(number2Array.length != 0)
-            document.getElementById("result").innerHTML = number2Array;
-        else
-            document.getElementById("result").innerHTML = 0;
+        number2Array += input.toString();
+
+        Display(number2Array);
     }
 }
-function Start()
-{
-    number1Array = null;
-    number2Array = null;
+
+function Display(arr){
+    if(arr.length != 0)
+        document.getElementById("result").innerHTML = arr;
+    else
+        document.getElementById("result").innerHTML = 0;
+}
+
+function Start(){
+    number1Array = Array();
+    number2Array = Array();
     number1 = null;
     number2 = null;
     operation = null;
     result = null;
     document.getElementById("result").innerHTML = 0;
 }
-function Add()
-{
-   operation = 1;
-}
-function Sub()
-{
-    operation = 2;
-}
-function Mul()
-{
-    operation = 3;
-}
-function Div()
-{
-    operation = 4;
-}
-function SetResult() 
-{
-    number2 = ConvertToNumber(number2Array);
 
+function SetOperationCode(code){ 
+    operation = code;
+}
+
+function SetResult() {
+    number2 = ConvertToNumber(number2Array);
     switch(operation)
     {
         case 1:
@@ -79,18 +69,17 @@ function SetResult()
             break;
         }
     operation = null;
+    number2Array = Array();
     document.getElementById("result").innerHTML = result==null ? 0: result;
 }
-function ConvToNumber(stringArr)
-{
-    var num;
+
+function ConvertToNumber(stringArr){
+    var num = 0;
     var multiplier = 1;
-    alert(stringArr);
     for(i = stringArr.length-1; i >= 0; i--)
     {
         num += multiplier * parseInt(stringArr[i],10);
         multiplier *= 10;
     }
-    alert(num);
     return num;
 }
