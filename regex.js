@@ -1,7 +1,6 @@
 function validateForm()
 {
     var valid = true;
-    var dict = new Object();
     var dict = {
         "name": /^[A-Z|ŁŚŻŹŃĆ][a-z|łąęóćśńżź]+$/,
         "surname": /^[A-ZŁŚŻŹŃĆ]([a-złąęóćśńżź]+([-| ][A-ZŁŚŻŹŃĆ][a-złąęóćśńżź]+)?)$/,
@@ -24,4 +23,14 @@ function checkInput(formID, regex)
     var elementResult = regex.test(element);
     document.getElementById(formID).style.borderColor = elementResult==false ? "red" : "black";
     return elementResult==false ? false: true;
+}
+function resetForm()
+{
+    var formsList = [
+        "name", "surname", "street", "houseNumber", "flatNumber", "city", "dateofBirth", "phoneNumber"
+    ]
+    for(i=0; i<formsList.length;i++)
+    {
+        document.getElementById(formsList[i]).style.borderColor = "black";
+    }
 }
