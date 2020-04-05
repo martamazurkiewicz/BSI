@@ -21,7 +21,7 @@ function checkInput(formID, regex)
 {
     var element = document.getElementById(formID).value;
     var elementResult = regex.test(element);
-    document.getElementById(formID).style.borderColor = elementResult==false ? "red" : "black";
+    document.getElementById(formID).style.borderColor = elementResult==false ? "red" : "grey";
     return elementResult==false ? false: true;
 }
 function resetForm()
@@ -31,6 +31,6 @@ function resetForm()
     ]
     for(i=0; i<formsList.length;i++)
     {
-        document.getElementById(formsList[i]).style.borderColor = "black";
+        document.getElementById(formsList[i]).style.borderColor = "grey";
     }
 }
