@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head> 
+	<meta charset="UTF-8">
+    <title>Formularz</title>
+    <script src="regex.js"></script>
+	<style>
+	.container{
+	width: 50em;
+	}
+	
+	.row{
+    padding-left: 1%;
+	}
+	
+	.form {
+	float: left;
+	width: 30%;
+	}
+	
+	.input {
+	float: left;
+    width: 70%;
+	}
+		</style>
+</head>
+<body>
+	<div class="container">
+		<form onsubmit="return validateForm()"> 
+		
+		<div class="row">
+			<div class="form">
+				<label for="name">Imię</label>
+			</div>
+			<div class="input">
+				<input type="text" id="name" name="name" placeholder="Imię">
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="form">
+				<label for="name">Nazwisko</label>
+			</div>
+			<div class="input">
+				<input type="text" id="surname" name="surname" placeholder="Nazwisko" required>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="form">
+					<label for="street">Ulica</label>
+			</div>
+			<div class="input">
+					<input type="text" id="street" name="street" required>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="form">
+					<label for="houseNumber">Numer domu</label>
+			</div>
+			<div class="input">
+					<input type="text" id="houseNumber" name="houseNumber" required>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form">
+					<label for="flatNumber">Numer mieszkania</label>
+			</div>
+			<div class="input">
+					<input type="text" id="flatNumber" name="flatNumber">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form">
+					<label for="city">Miasto</label>
+			</div>
+			<div class="input">
+					<input type="text" id="city" name="city" required>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="form">
+					Płeć
+			</div>
+			<div class="input">
+				<input type="radio" id="male" name="gender" value="male">
+				<label for="male">Mężczyzna</label>
+		
+				<input type="radio" id="female" name="gender" value="female">
+				<label for="female">Kobieta</label>
+		
+				<input type="radio" id="other" name="gender" value="other">
+				<label for="other">Inna</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form">
+				Czy posiadasz prawo jazdy?
+			</div>
+			<div class="input">
+				<input type="checkbox" id="yes" name="dravingLicence" value="yes">
+				<label for="yes">Tak</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form">
+				<label for="voivodeship">Województwo</label>
+			</div>
+			<div class="input">
+				<select id="voivodeship" name="voivodeship">
+					<option value="dolnośląskie">dolnośląskie</option>
+					<option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
+					<option value="lubelskie">lubelskie</option>
+					<option value="lubuskie">lubuskie</option>
+					<option value="łódzkie">łódzkie</option>
+					<option value="małopolskie">małopolskie</option>
+					<option value="mazowieckie">mazowieckie</option>
+					<option value="opolskie">opolskie</option>
+					<option value="podkarpackie">podkarpackie</option>
+					<option value="podlaskie">podlaskie</option>
+					<option value="pomorskie">pomorskie</option>
+					<option value="śląskie">śląskie</option>
+					<option value="świętokrzyskie">świętokrzyskie</option>
+					<option value="warmińsko-mazurskie">warmińsko-mazurskie</option>
+					<option value="wielkopolskie">wielkopolskie</option>
+					<option value="zachodniopomorskie">zachodniopomorskie</option>
+				  </select>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="form">
+				<label for="comments">Uwagi</label>
+			</div>
+			<div class="input">
+				<input type="text" id="comments" name="comments" style="height:5em;">
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="form">
+				<label for="dateofBirth">Data Urodzenia</label>
+			</div>
+			<div class="input">
+				<input type="text" id="dateofBirth" name="dateofBirth" placeholder="dd.mm.rrrr" required>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="form">
+				<label for="phoneNumber">Numer Telefonu</label>
+			</div>
+			<div class="input">
+				<input type="text" id="phoneNumber" name="phoneNumber" placeholder="123-456-789" required>
+			</div>
+        </div>
+        <div class="row">
+			<div>
+				<input style="text-align: center;width: 10em;height: 2em;" type="submit" id="submit" name="submit" value="submit">
+			</div>
+			<div>
+				<input style="text-align: center;width: 10em;height: 2em;" type="reset" id="reset" name="reset" value="reset">
+			</div>
+		</div>
+
+		</form>
+	</div>
+</body>
+</html>
+
