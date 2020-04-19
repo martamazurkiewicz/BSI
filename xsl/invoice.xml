@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="invoice.xslt"?>
+<!-- <Dane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> -->
+<invoice>
+	<place>Warszawa</place>
+	<sellingDate>19.04.2020</sellingDate>
+	<issuingDate>18.04.2020</issuingDate>
+	<invoiceNumber>
+		<nr1>1</nr1>
+		<nr2>2</nr2>
+		<nr3>3</nr3>
+	</invoiceNumber>
+	<buyer>
+		<name>Jan Kowalski z.o.o</name>
+		<address>ul. Kwiatowa 1, 03-00 Warszawa</address>
+		<NIP>900-900-90-90</NIP>
+	</buyer>
+	<service>
+		<name>Wynajem pokoju 2-os</name>
+		<PKWiU>55</PKWiU>
+		<unitOfMeasure>doba</unitOfMeasure>
+		<quantity>2</quantity>
+		<unitPrice>80</unitPrice>
+		<grossValue>160</grossValue>
+		<VATRate>23</VATRate>
+		<VAT>36,8</VAT>
+		<netValue>123,2</netValue>
+	</service>
+	<service>
+		<name>Wynajem pokoju 1-os</name>
+		<PKWiU>55</PKWiU>
+		<unitOfMeasure>doba</unitOfMeasure>
+		<quantity>2</quantity>
+		<unitPrice>60</unitPrice>
+		<grossValue>120</grossValue>
+		<VATRate>23</VATRate>
+		<VAT>27,6</VAT>
+		<netValue>92,4</netValue>
+	</service>
+	<wholeValue>
+		<grossValue>280</grossValue>
+		<VAT>64,4</VAT>
+		<netValue>215,6</netValue>
+	</wholeValue>
+	<toPay>280</toPay>
+	<inText>dwieście osiemdzieciąt złotych</inText>
+	<paymentMethod>Przelew</paymentMethod>
+	<paymentDeadline>23.04.2020</paymentDeadline>
+	<wasPayed>0 zł</wasPayed>
+	<invoiceIssuer>Monika Słoneczna</invoiceIssuer>
+	<invoiceRecipient>Jan Kowalski</invoiceRecipient>
+</invoice>

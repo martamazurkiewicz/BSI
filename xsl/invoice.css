@@ -1,0 +1,175 @@
+body{
+    background-image: url("faktura.gif");
+    background-repeat: no-repeat;
+    background-size: 40em;
+    
+}
+.header{
+    position: absolute;
+    left: 30em;
+    top: 0.6em;
+    font-size: 0.9em;
+}
+.nr1{
+    left: 21.5em;
+}
+.nr2{
+    left: 23em;
+}
+.nr3{
+    left: 24.5em;
+}
+.nr1, .nr2, .nr3{
+    position: absolute;
+    top: 8em;
+    font-size: 0.9em;
+}
+.buyer{
+    position: absolute;
+    top: 14.6em;
+    font-size: 0.9em; 
+    left: 20em;
+}
+.NIP{
+    position: absolute;
+    top: 17.85em;
+    font-size: 0.9em; 
+    left: 21em;
+}
+.table{
+    position: absolute;
+    font-size: 0.8em; 
+    top: 26em;
+}
+.row{
+    height: 2.1em;
+}
+.col1{
+    padding-left: 2.6em;
+    width: 10.5em;
+}
+.col2{
+    width: 3em; 
+}
+.col3{
+    width: 3em;
+}
+.col4{
+    width: 4em;
+}
+.col5{
+    width: 7em;
+}
+.col6{
+    width: 3.5em;
+}
+.col7{
+    width: 4em;
+}
+.col8{
+    width: 5em;
+}
+.grossValue{
+    top: 35.6em;
+}
+.grossValueR{
+    top: 36.8em;
+}
+.grossValue23{
+    top: 38em;
+}
+.grossValue7{
+    top: 39.2em;
+}
+.grossValue0{
+    top: 40.3em;
+}
+.grossValue, .grossValueR, .grossValue23, 
+.grossValue7, .grossValue0{
+    position: absolute;
+    font-size: 0.8em; 
+    left: 32em;
+}
+.VAT{
+    top: 35.6em;
+}
+.VATR{
+    top: 36.8em;
+}
+.VAT23{
+    top: 38em;
+}
+.VAT7{
+    top: 39.2em;
+}
+.VAT0{
+    top: 40.3em;
+}
+.VAT, .VATR, .VAT23, .VAT7, .VAT0{
+    position: absolute;
+    font-size: 0.8em; 
+    left: 41em;
+}
+.netValue{
+    top: 35.6em;
+}
+.netValueR{
+    top: 36.8em;
+}
+.netValue23{
+    top: 38em;
+}
+.netValue7{
+    top: 39.2em;
+}
+.netValue0{
+    top: 40.3em;
+}
+.netValue, .netValueR, .netValue23, 
+.netValue7, .netValue0{
+    position: absolute;
+    font-size: 0.8em; 
+    left: 46em;
+}
+.toPay{
+    position: absolute;
+    font-size: 0.8em; 
+    left: 45em;
+    top: 41.3em;
+}
+.inText{
+    position: absolute;
+    font-size: 0.9em; 
+    left: 4.5em;
+    top: 34.1em;
+}
+.paymentMethod{
+    position: absolute;
+    font-size: 0.9em; 
+    left: 7.5em;
+    top: 39.3em;
+}
+.paymentDeadline{
+    position: absolute;
+    font-size: 0.9em; 
+    left: 7.5em;
+    top: 40.4em;
+}
+.wasPayed{
+    position: absolute;
+    font-size: 0.9em; 
+    left: 18em;
+    top: 39.3em;
+}
+.invoiceIssuer{
+    position: absolute;
+    font-size: 0.9em; 
+    left: 4em;
+    top: 45em;
+}
+.invoiceRecipient{
+    position: absolute;
+    font-size: 0.9em; 
+    left: 23em;
+    top: 45em;
+}
