@@ -1,3 +1,4 @@
+<?php require 'redirection.php'; ?>
 <!doctype html>
 <html>
 <head>
