@@ -68,7 +68,7 @@ while($row = $result->fetch_assoc()) {
     echo "<tr><th>";
     if(isset($_GET['editButton']) && $_GET['ID']==$row['ID'])
     {
-        echo "<input type='text' name='editedName' placeholder ='".$row["NAME"]."'/>";
+        echo "<input type='text' name='editedName' value ='".$row["NAME"]."'/>";
     }
     else
     {
@@ -77,7 +77,7 @@ while($row = $result->fetch_assoc()) {
     echo "</th><th>";
     if(isset($_GET['editButton']) && $_GET['ID']==$row['ID'])
     {
-        echo "<input type='text' name='editedSurname' placeholder ='".$row["SURNAME"]."'/>";
+        echo "<input type='text' name='editedSurname' value ='".$row["SURNAME"]."'/>";
     }
     else
     {
