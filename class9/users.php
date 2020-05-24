@@ -22,7 +22,18 @@
     </div>
   </div>
 </form>
-<!-- <table id="usersTable"></table>
-<script>refreshUsersCatalogue()</script> -->
+<table class="table table-hover" style="margin: 1em;width: 40%" id="usersTable">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Nr</th>
+            <th scope="col">Imię</th>
+            <th scope="col">Nazwisko</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody id="usersTableBody">
+    </tbody>
+</table>
+<script>refreshUsersCatalogue()</script>
 </body>
 </html>
