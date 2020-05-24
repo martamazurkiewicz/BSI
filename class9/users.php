@@ -12,17 +12,17 @@
 <form>
   <div class="form-row align-items-center" style="margin: 1em">
     <div class="col-auto">
-      <input type="text" class="form-control" id="name" placeholder="Imię">
+      <input type="text" class="form-control" name="name" id="newName" placeholder="Imię">
     </div>
     <div class="col-auto">
-        <input type="text" class="form-control" id="surname" placeholder="Nazwisko">
+        <input type="text" class="form-control" name="surname" id="newSurname" placeholder="Nazwisko">
     </div>
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary" onclick="addNewUser()">Dodaj Studenta</button>
+      <button type="button" class="btn btn-primary" name="addButton" onclick="addNewUser()">Dodaj Studenta</button>
     </div>
   </div>
 </form>
-<table id="usersTable"></table>
-<script>refreshUsersCatalogue()</script>
+<!-- <table id="usersTable"></table>
+<script>refreshUsersCatalogue()</script> -->
 </body>
 </html>
