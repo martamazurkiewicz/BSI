@@ -1,3 +1,4 @@
+<?php require '../class7/redirection.php'; ?>
 <html>
 <head>
     <meta charset="UTF-8"/>

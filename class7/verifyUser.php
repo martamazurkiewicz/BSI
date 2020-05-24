@@ -9,7 +9,7 @@
     else
     {
         $_SESSION['401'] = true;
-        header('Location: http://mmaz.cba.pl/signInPage.php?message=401');
+        header('Location: http://mmaz.cba.pl/class7/signInPage.php?message=401');
     }
 
     exit();

@@ -1,10 +1,9 @@
-<?php require 'redirection.php'; ?>
+<?php require '../class7/redirection.php'; ?>
 <!doctype html>
 <html>
 <head>
 	<meta charset="UTF-8">
     <title>Formularz</title>
-    <script src="regex.js"></script>
 	<style>
 		input{
 			border-color: grey;
@@ -33,21 +32,21 @@
 </head>
 <body>
 	<table>
-		<form onsubmit="return validateForm()">
+		<form action="result.php" method="post">
 		<tr>
 			<th>
 				<label for="name">Imię</label>
 			</th>
 			<th>
-				<input type="text" id="name" placeholder="Imię">
+				<input type="text" name="name" placeholder="Imię">
 			</th>
 		</tr>
 		<tr>
 			<th>
-				<label for="name">Nazwisko</label>
+				<label for="surname">Nazwisko</label>
 			</th>
 			<th>
-				<input type="text" id="surname" placeholder="Nazwisko">
+				<input type="text" name="surname" placeholder="Nazwisko">
 			</th>
 		</tr>
 		<tr>
@@ -55,7 +54,7 @@
 				<label for="street">Ulica</label>
 			</th>
 			<th>
-				<input type="text" id="street" placeholder="Ulica">
+				<input type="text" name="street" placeholder="Ulica">
 			</th>
 		</tr>
 		<tr>
@@ -63,7 +62,7 @@
 				<label for="houseNumber">Numer domu</label>
 			</th>
 			<th>
-				<input type="text" id="houseNumber" placeholder="Numer domu">
+				<input type="text" name="houseNumber" placeholder="Numer domu">
 			</th>
 		</tr>
 		<tr>
@@ -71,7 +70,7 @@
 				<label for="flatNumber">Numer mieszkania</label>
 			</th>
 			<th>
-				<input type="text" id="flatNumber" placeholder="Numer mieszkania">
+				<input type="text" name="flatNumber" placeholder="Numer mieszkania">
 			</th>
 		</tr>
 		<tr>
@@ -79,7 +78,7 @@
 				<label for="city">Miasto</label>
 			</th>
 			<th>
-				<input type="text" id="city" placeholder="Miasto">
+				<input type="text" name="city" placeholder="Miasto">
 			</th>
 		</tr>
 		<tr>
@@ -102,7 +101,7 @@
 				<label for="dravingLicence">Czy posiadasz prawo jazdy?</label>
 			</th>
 			<th>
-				<input type="checkbox" id="dravingLicence" value="yes">
+				<input type="checkbox" name="dravingLicence" value="yes">
 				<label for="dravingLicence">Tak</label>
 			</th>
 		</tr>
@@ -111,7 +110,7 @@
 				<label for="voivodeship">Województwo</label>
 			</th>
 			<th>
-				<select id="voivodeship" style="width: 90%; height: 1.5em;"> 
+				<select name="voivodeship" style="width: 90%; height: 1.5em;"> 
 					<option value="dolnośląskie">dolnośląskie</option>
 					<option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
 					<option value="lubelskie">lubelskie</option>
@@ -136,7 +135,7 @@
 				<label for="comments">Uwagi</label>
 			</th>
 			<th>
-				<input type="text" id="comments" style="height:4em;">
+				<input type="text" name="comments" style="height:4em;">
 			</th>
 		</tr>
 		<tr>
@@ -144,7 +143,7 @@
 				<label for="dateofBirth">Data Urodzenia</label>
 			</th>
 			<th>
-				<input type="text" id="dateofBirth" placeholder="dd.mm.rrrr">
+				<input type="text" name="dateofBirth" placeholder="dd.mm.rrrr">
 			</th>
 		</tr>
 		<tr>
@@ -152,7 +151,7 @@
 				<label for="phoneNumber">Numer Telefonu</label>
 			</th>
 			<th>
-				<input type="text" id="phoneNumber" placeholder="123-456-789">
+				<input type="text" name="phoneNumber" placeholder="123-456-789">
 			</th>
 		</tr>
 		<tr>
@@ -160,7 +159,7 @@
 				<input style="width: 10em;height: 2.2em;" type="submit" id="submit" value="Zatwierdź">
 			</th>
 			<th>
-				<input style="width: 10em;height: 2.2em;" type="reset" id="reset" value="Wyczyść" onclick="resetForm()">
+				<input style="width: 10em;height: 2.2em;" type="reset" id="reset" value="Wyczyść">
 			</th>
 		</tr>
 	</form>
