@@ -8,13 +8,12 @@ if ($con->connect_errno != 0) {
 else
 {
     // Takes raw data from the request
-    $json = file_get_contents('php://input');
-
+    //$json = file_get_contents('php://input');
     // Converts it into a PHP object
-    $data = json_decode($json);
-    $id = $data->id;
+    //$data = json_decode($json);
+    //$id = $data->id;
+    $id = $_POST['id'];
     $query = "DELETE FROM USERS WHERE ID=" . $id;
-    var_dump($con->query($query));
     if ($con->query($query)) {
         $con->close();
         echo json_encode(array("message" => "success"));

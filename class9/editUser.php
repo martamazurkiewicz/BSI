@@ -7,13 +7,15 @@ if ($con->connect_errno != 0) {
 else
 {
     // Takes raw data from the request
-    $json = file_get_contents('php://input');
-
+    //$json = file_get_contents('php://input');
     // Converts it into a PHP object
-    $data = json_decode($json);
-    $id = $data->id;
-    $name = $data->name;
-    $surname = $data->surname;
+    //$data = json_decode($json);
+    //$id = $data->id;
+    //$name = $data->name;
+    //$surname = $data->surname;
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
     $name = htmlspecialchars(strip_tags($name), ENT_QUOTES);
     $surname = htmlspecialchars(strip_tags($surname), ENT_QUOTES);
 
