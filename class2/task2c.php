@@ -1,4 +1,4 @@
-<?php require 'redirection.php'; ?>
+<?php require '../class7/redirection.php'; ?>
 <!doctype html>
 <html>
 
